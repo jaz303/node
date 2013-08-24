@@ -146,6 +146,7 @@
         '<@(library_files)',
         # node.gyp is added to the project by default.
         'common.gypi',
+        'src/presto_entry.cc'
       ],
 
       'defines': [
