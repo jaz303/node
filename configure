@@ -626,6 +626,8 @@ def configure_winsdk(o):
   print('ctrpp not found in WinSDK path--using pre-gen files '
         'from tools/msvs/genfiles.')
 
+def configure_allegro(o):
+  o['libraries'] += ['-lallegro']
 
 # determine the "flavor" (operating system) we're building for,
 # leveraging gyp's GetFlavor function
@@ -650,6 +652,7 @@ configure_libuv(output)
 configure_v8(output)
 configure_openssl(output)
 configure_winsdk(output)
+configure_allegro(output)
 
 
 # variables should be a root level element,
